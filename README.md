@@ -1,12 +1,15 @@
-# ARMaker
+# umi project
 
-No Code, WYSIWYG, Web AR, Create your own augmented reality content without code.
+## Getting Started
 
-Create DIY augmented reality experiences in a few steps
+Install dependencies,
 
-## Reference
+```bash
+$ yarn
+```
 
-- Adobe aero
-- MindAR
-- [overlyapp] https://overlyapp.com/
-- 弥知科技
+Start the dev server,
+
+```bash
+$ yarn start
+```
