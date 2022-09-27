@@ -19,6 +19,9 @@ export default defineConfig({
     }
     `,
   ],
+  scripts: [
+    'https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js',
+  ],
   antd: {
     dark: true,
     compact: false,
