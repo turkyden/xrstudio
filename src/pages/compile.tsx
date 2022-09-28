@@ -62,7 +62,7 @@ const UploadTab = ({ onDataReady }) => {
   }, [dropzone]);
   return (
     <div>
-      <p>Select target images and start</p>
+      <p>请选择目标图像，进行特征点提取</p>
       <div ref={refDropzone} className="dropzone"></div>
       {error && <p className="text--danger">{error}</p>}
       <div className="padding-vert--md">

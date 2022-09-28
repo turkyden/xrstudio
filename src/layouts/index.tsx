@@ -1,4 +1,4 @@
-import { IRouteComponentProps } from 'umi';
+import { IRouteComponentProps, Link } from 'umi';
 
 export default function Layout({
   children,
@@ -17,13 +17,13 @@ export default function Layout({
             alt="avatar"
           />
           <div className="pl-4">
-            <div className="text-xl">ARMaker</div>
+            <div className="text-xl">XRStudio</div>
             <div className="text-xs">v0.0.1 Beta</div>
           </div>
         </div>
 
-        <div className="bg-white/5 rounded-xl h-64 p-4">
-          <div className="flex items-center bg-white/10 rounded-lg p-2">
+        <div className="bg-white/5 rounded-xl h-64 p-4 space-y-2">
+          <Link to="/" className="flex items-center text-white hover:text-white hover:bg-white/10 rounded-lg p-2 cursor-pointer">
             <svg
               className="w-5 h-5"
               fill="none"
@@ -39,7 +39,15 @@ export default function Layout({
               />
             </svg>
             <div className="text-sm pl-2">工作台</div>
-          </div>
+          </Link>
+
+          <Link to="/compile" className="flex items-center hover:text-white text-white hover:bg-white/10 rounded-lg p-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+            </svg>
+
+            <div className="text-sm pl-2">特征点</div>
+          </Link>
         </div>
       </div>
 

@@ -7,7 +7,7 @@ export default function IndexPage() {
             <div className="overflow-hidden rounded-xl ring-blue-500 group-hover:ring-4 transition">
               <img
                 className="w-full transform group-hover:scale-110 transition"
-                src="https://filespreview.spline.design/11056099-fc3b-434d-90db-b79efebb568e.jpg"
+                src={require('@/assets/screenshot.png')}
                 alt=""
               />
             </div>
