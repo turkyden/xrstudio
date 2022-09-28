@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import clsx from 'clsx';
 import './compile.css';
 
-export const UploadTab = ({ onDataReady }) => {
+const UploadTab = ({ onDataReady }) => {
   const [error, setError] = useState('');
   const [dropzone, setDropzone] = useState(null);
   const [percentage, setPercentage] = useState(null);
@@ -80,7 +80,7 @@ export const UploadTab = ({ onDataReady }) => {
   );
 };
 
-export const VisualizeTab = ({ dataList, exportedBuffer }) => {
+const VisualizeTab = ({ dataList, exportedBuffer }) => {
   const canvasRef = useRef(null);
   const [targetIndex, setTargetIndex] = useState(0);
   const [keyframeIndex, setKeyframeIndex] = useState(0);
@@ -240,16 +240,15 @@ export default function Compile() {
     setExportedBuffer(exportedBuffer);
     setStep('visualize');
   }, []);
+
   return (
     <div>
-      {() => (
-        <div>
-          {step === 'upload' && <UploadTab onDataReady={onDataReady} />}
-          {step === 'visualize' && (
-            <VisualizeTab dataList={dataList} exportedBuffer={exportedBuffer} />
-          )}
-        </div>
-      )}
+      <div>
+        {step === 'upload' && <UploadTab onDataReady={onDataReady} />}
+        {step === 'visualize' && (
+          <VisualizeTab dataList={dataList} exportedBuffer={exportedBuffer} />
+        )}
+      </div>
     </div>
   );
 }
