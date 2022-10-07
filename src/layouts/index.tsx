@@ -7,6 +7,10 @@ export default function Layout({
   history,
   match,
 }: IRouteComponentProps) {
+  if (location.pathname === '/demo') {
+    return <div>hi</div>;
+  }
+
   return (
     <div className="flex space-x-8">
       <div className="w-64 h-screen p-6 flex flex-col justify-between">
@@ -225,7 +229,7 @@ export default function Layout({
             + 创建
           </div>
         </div>
-        {children}
+        <div id="container">{children}</div>
       </div>
     </div>
   );

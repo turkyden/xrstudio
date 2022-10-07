@@ -21,14 +21,19 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "@react-three/drei": "^9.34.3",
+    "@react-three/fiber": "^8.8.9",
+    "@react-three/xr": "^5.0.4",
     "clsx": "^1.2.1",
     "react": "17.x",
     "react-dom": "17.x",
+    "three": "^0.145.0",
     "umi": "^3.5.34"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/three": "^0.144.0",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.5.34",
     "lint-staged": "^10.0.7",
