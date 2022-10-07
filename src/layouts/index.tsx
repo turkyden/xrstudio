@@ -26,7 +26,9 @@ export default function Layout({
           <div className="bg-white/5 rounded-xl h-64 p-4 space-y-2">
             <Link
               to="/"
-              className="flex items-center hover:text-white text-gray-400 bg-white/10 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+              className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+                location.pathname === '/' && 'bg-white/10 text-white'
+              }`}
             >
               <svg
                 className="w-5 h-5"
@@ -47,7 +49,9 @@ export default function Layout({
 
             <Link
               to="/ar"
-              className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+              className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+                location.pathname === '/ar' && 'bg-white/10 text-white'
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,9 @@ export default function Layout({
 
             <Link
               to="/vr"
-              className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+              className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+                location.pathname === '/vr' && 'bg-white/10 text-white'
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,8 +94,10 @@ export default function Layout({
             </Link>
 
             <Link
-              to="/compile"
-              className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+              to="/compiler"
+              className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+                location.pathname === '/compiler' && 'bg-white/10 text-white'
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +118,9 @@ export default function Layout({
 
             <Link
               to="/model"
-              className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+              className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+                location.pathname === '/model' && 'bg-white/10 text-white'
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +144,9 @@ export default function Layout({
         <div className="rounded-xl p-4 space-y-2">
           <Link
             to="/archive"
-            className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+            className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+              location.pathname === '/archive' && 'bg-white/10 text-white'
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +167,9 @@ export default function Layout({
 
           <Link
             to="/changelog"
-            className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+            className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+              location.pathname === '/changelog' && 'bg-white/10 text-white'
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +190,9 @@ export default function Layout({
 
           <Link
             to="/helper"
-            className="flex items-center hover:text-white text-gray-400 hover:bg-white/10 rounded-lg p-2 cursor-pointer"
+            className={`flex items-center hover:text-white text-gray-400  hover:bg-white/10 rounded-lg p-2 cursor-pointer ${
+              location.pathname === '/helper' && 'bg-white/10 text-white'
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -198,10 +214,15 @@ export default function Layout({
       </div>
 
       <div className="flex-1 p-4">
-        <div className="flex items-center py-5 space-x-4">
-          <div className="text-sm">我的项目</div>
-          <div className="py-1 px-2 text-xs bg-gray-500/50 rounded-full hover:bg-gray-500/75 cursor-pointer transition">
-            + 创建合辑
+        <div className="flex items-center justify-between py-5">
+          <div className="flex items-center space-x-4">
+            <div className="text-sm">我的项目</div>
+            <div className="py-1 px-2 text-xs bg-gray-500/50 rounded-full hover:bg-gray-500/75 cursor-pointer transition">
+              + 创建合辑
+            </div>
+          </div>
+          <div className="py-1 px-6 text-sm bg-blue-500 rounded hover:bg-blue-600 cursor-pointer transition">
+            + 创建
           </div>
         </div>
         {children}

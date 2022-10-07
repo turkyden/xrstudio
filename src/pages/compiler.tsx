@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import clsx from 'clsx';
-import './compile.css';
+import './compiler.css';
 
 const UploadTab = ({ onDataReady }) => {
   const [error, setError] = useState('');
